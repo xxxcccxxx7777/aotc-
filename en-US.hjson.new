@@ -1,0 +1,17 @@
+
+Mods: {
+	AotC: {
+		Projectiles: {
+			ArkoftheCosmosSwungBlade.DisplayName: Ark of the Cosmos
+			Beam.DisplayName: Beam
+			EonBolt.DisplayName: Eon Bolt
+		}
+
+		Items: {
+			ArkoftheCosmos: {
+				DisplayName: The Ark of the Cosmos
+				Tooltip: A blade forged with pure magic and wielded by Hope itself
+			}
+		}
+	}
+}

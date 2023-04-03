@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <FrameworkPathOverride>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0</FrameworkPathOverride>    
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4A45777-8C07-47F7-A0AC-DE9027DA8C84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>AotC</AssemblyName>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <RootNamespace>AotC</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />  
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Drawing.Primitives" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization.Formatters" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AotC.cs" />
+    <Compile Include="Content\ArkoftheCosmosSwungBlade.cs" />
+    <Compile Include="Content\Beam.cs" />
+    <Compile Include="Content\EonBolt.cs" />
+    <Compile Include="Content\Shimmer.cs" />
+    <Compile Include="Content\Items\Weapons\ArkoftheCosmos.cs" />
+    <Compile Include="Content\StolenCalamityCode\BaseLaserbeamProjectile.cs" />
+    <Compile Include="Content\StolenCalamityCode\BezierCurve.cs" />
+    <Compile Include="Content\StolenCalamityCode\CalamityShaders.cs" />
+    <Compile Include="Content\StolenCalamityCode\CalamityUtils.cs" />
+    <Compile Include="Content\StolenCalamityCode\CircularSmearSmokeyVFX.cs" />
+    <Compile Include="Content\StolenCalamityCode\EntityUpdateInterceptionSystem.cs" />
+    <Compile Include="Content\StolenCalamityCode\GeneralParticleHandler.cs" />
+    <Compile Include="Content\StolenCalamityCode\Particle.cs" />
+    <Compile Include="Content\StolenCalamityCode\PrimitiveTrail.cs" />
+    <Compile Include="Content\Sounds\AotCAudio.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
